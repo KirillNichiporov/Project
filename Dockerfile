@@ -179,5 +179,5 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 RUN service apache2 restart
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["bash","docker-entrypoint.sh"]
 CMD ["apache2-foreground"]
