@@ -49,16 +49,9 @@ pipeline {
     stage('Deploy Worpress') {
       steps{
         script {
-          sh """"
+          sh """
           helm dependency update ./wordpress
-          helm upgrade --install
-          --set mariadb.enabled=false,externalDatabase.host=192.168.203.22,externalDatabase.password=wordpress,global.storageClass=nfs-client,wordpressUsername=admin,wordpressPassword=admin
-          --debug
-          --wait
-          --timeout 3m
-          --namespace=wordpress
-          -f ./wordpress/values.yaml
-          ./wordpress
+          helm upgrade --install --set mariadb.enabled=false,externalDatabase.host=192.168.203.22,externalDatabase.password=wordpress,global.storageClass=nfs-client,wordpressUsername=admin,wordpressPassword=admin --debug --wait --timeout 3m --namespace=wordpress -f ./wordpress/values.yaml ./wordpress
           """
 
         }
