@@ -3,7 +3,7 @@ replicaCount: 2
 image:
   repository: kirill123433353463/wordpress_project
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "stable"
+  tag: "latest"
 
 service:
   type: ClusterIP

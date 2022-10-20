@@ -124,12 +124,12 @@ RUN set -eux; \
 RUN set -eux; \
 	#version='6.0.1'; \
 	#sha1='a1c02b6b754d74c08a70d5a8b604bdb72f1b276a'; \
-	#version='6.0'; \
-	#sha1='7a5a6d0591771e730b05c49d0c3fc134624d0491'; \
+	version='6.0'; \
+	sha1='7a5a6d0591771e730b05c49d0c3fc134624d0491'; \
 	#version='5.9.4'; \
 	#sha1='4def36bb1b4a3c935cf9758f652cd719e97d97c9'; \
-	version='5.9.3'; \
-	sha1='cab576e112c45806c474b3cbe0d1263a2a879adf'; \
+	#version='5.9.3'; \
+	#sha1='cab576e112c45806c474b3cbe0d1263a2a879adf'; \
 	#version='5.9.2'; \
 	#sha1='19653440effafce0f768a1ba5092710717835bdc'; \
 	\
