@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: wordpress-pv-volume
+  labels:
+    type: nfs
+    name: wordpress-nfs-vol
+    {{- include "wordpress.labels" . | nindent 4 }}
+spec:
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Recycle
+  nfs:
+    path: /mnt/IT-Academy/nfs-data/sa2-21-22/Nichiporov/
+    server: 192.168.37.105
