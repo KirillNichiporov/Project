@@ -57,8 +57,7 @@ pipeline {
           --wait
           --timeout 3m
           --namespace=wordpress
-          -f ./wordpress/values.yaml
-          ./wordpress
+          -f ./wordpress
           """
 
         }
