@@ -57,7 +57,8 @@ pipeline {
           --wait
           --timeout 3m
           --namespace=wordpress
-          -f ./wordpress
+          -f ./wordpress/values.yaml
+          ${CI_PROJECT_NAME} ./wordpress
           """
 
         }
