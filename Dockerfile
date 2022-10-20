@@ -176,8 +176,7 @@ COPY --chown=www-data:www-data newThemes/ /usr/src/wordpress/wp-content/themes/n
 
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
-RUN service apache2 restart
 
-ENTRYPOINT ["bash","docker-entrypoint.sh"]
+
+ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["apache2-foreground"]
