@@ -1,5 +1,6 @@
 pipeline {
-      environment {
+  triggers { pollSCM 'H/5 * * * *' }
+  environment {
     registry = "kirill123433353463/wordpress_project"
     registryCredential = 'dockerhub'
   }
